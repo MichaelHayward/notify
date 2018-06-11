@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="notify.css">
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="explainer">
+      A wise man once said to me: <strong>'Keep it simple, stupid!'</strong>
+      <p>
+        Over time, I'm building a few of my own libraries to solve problems
+        rather than bringing in NPM packages.
+        <br><br> Why? <br><br>
+        Mostly, the learning experience - but also as a means to get a few
+        clear-cut packages that do specific things. This should (hopefully)
+        guard against dependence on dependencies.
+      </p>
+
+      <div class="code-block">
+        <code>
+          notify(`success`, `This is a success message`)<br><br>
+          notify(`fail`, `This is an error message`)<br><br>
+          notify(`warning`, `This is a warning message`)<br><br>
+          notify(`info`, `This is an informative message`)<br><br>
+        </code>
+      </div>
+
+      <div class="buttonRow">
+        <button type="button" name="button" class="msgButton"
+        onclick="notify(`success`, `This is a success message.`)"
+        style="background-color:#64dc64;">
+          Success
+        </button>
+        <button type="button" name="button" class="msgButton"
+        onclick="notify(`fail`, `This is an error message`)"
+        style="background-color:#ec3232;">
+          Fail
+        </button>
+        <button type="button" name="button" class="msgButton"
+        onclick="notify(`warning`, `This is a warning message`)"
+        style="background-color:#ff7300;">
+          Warning
+        </button>
+        <button type="button" name="button" class="msgButton"
+        onclick="notify(`info`, `This is an informative message`)"
+        style="background-color:#63b3ce;">
+          Info
+        </button>
+      </div>
+
+    </div>
+    <p style="text-align:center">
+      It's a basic feature with room to extend, which is exactly the point. <br>
+      I don't know if you're using SASS, PostCSS or not, so the CSS is oldschool.
+    </p>
+    <script type="text/javascript" src="notify.js"></script>
+    <style media="screen">
+      /* This is all embedded styling as this isn't the part we're showcasing.
+      The only files that are relevant are notify.css and notify.js */
+      body {
+        font-family: Tajawal;
+      }
+      .code-block {
+        background: #aaaaaa;
+        line-height: 2rem;
+        padding: 20px;
+      }
+      .remind {
+        display: block;
+        position: absolute;
+        top:40%; left:50%;
+        width: 90%;
+        transform: translate(-50%);
+      }
+      .explainer {
+        max-width:800px;
+        display:block;
+        margin:auto;
+      }
+      .msgButton {
+        border: none;
+        padding: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 15px;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+      }
+      .buttonRow{
+        margin-top:30px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </body>
+</html>

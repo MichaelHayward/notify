@@ -1,0 +1,70 @@
+/* css for notify js and css modules */
+
+.alert {
+  width: 300px;
+  height: auto;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+  font-size: 1.1rem;
+
+  padding: 10px 10px 10px 20px;
+
+  transition: 0.5s;
+  animation: fade-up-in 0.5s;
+}
+
+.alert-warning {
+  background-color: #ff7300;
+}
+
+.alert-fail{
+  background-color: #ec3232;
+}
+
+.alert-success {
+  background-color: #64dc64;
+}
+
+.alert-info {
+  background-color: #63b3ce;
+}
+
+.alert-clear {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  padding:5px;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10%;
+}
+
+.alert-clear i {
+  display: block;
+  position: absolute;
+  top: 20%; left: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
+}
+
+.alert-message {
+  width: 250px;
+}
+
+.alert-message a {
+  text-decoration: none;
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+@keyframes fade-up-in {
+  0%   {opacity: 0; bottom: -50px }
+  100% {opacity: 1; bottom: 20px  }
+}
