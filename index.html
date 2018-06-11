@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Notify</title>
     <link rel="stylesheet" href="notify.css">
     <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -56,6 +56,13 @@
       It's a basic feature with room to extend, which is exactly the point. <br>
       I don't know if you're using SASS, PostCSS or not, so the CSS is oldschool.
     </p>
+
+    <ol>
+      <li>Creates a notification div in the bottom-left corner of the window</li>
+      <li>Notification remains for 4 seconds unless the X is clicked</li>
+      <li>Mousing over the notification will prevent the automatic deletion</li>
+    </ol>
+
     <script type="text/javascript" src="notify.js"></script>
     <style media="screen">
       /* This is all embedded styling as this isn't the part we're showcasing.
